@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite1" parallel="classes" thread-count="2" data-provider-thread-count="2">
+    <test name="TestAssessment">
+        <classes>
+         	<class name="runners.testRunner1"/>
+         	<class name="runners.testRunner3"/>
+        </classes>
+    </test>	
+</suite>

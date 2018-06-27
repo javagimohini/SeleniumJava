@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [suite1]" parallel="classes" data-provider-thread-count="2">
+  <test name="TestAssessment">
+    <classes>
+      <class name="runners.testRunner1"/>
+      <class name="runners.testRunner3"/>
+    </classes>
+  </test> <!-- TestAssessment -->
+  <test name="TestAssessment(failed)" parallel="classes">
+    <classes>
+      <class name="runners.testRunner3">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runners.testRunner3 -->
+      <class name="runners.testRunner1">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runners.testRunner1 -->
+    </classes>
+  </test> <!-- TestAssessment(failed) -->
+</suite> <!-- Failed suite [suite1] -->
